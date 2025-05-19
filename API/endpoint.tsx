@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://64.227.178.158'
+export const BASE_URL = 'https://api.chembosky.com'
