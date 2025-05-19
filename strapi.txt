@@ -1,0 +1,172 @@
+// Strapi-like schema summaries based on types.d.ts
+
+1. FeaturedFilms
+  - Title: string
+  - Content: string
+  - Awards: string
+  - Films: string
+  - Streaming: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - locale: string
+
+2. Film
+  - Title: string
+  - Year: string
+  - slug: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - Image: media (name, url)
+
+3. UpcomingFilm
+  - Title: string
+  - Catogery: string
+  - genere1: string
+  - genere2: string
+  - durations: string
+  - FIlmContent: string
+  - ExternalUrl: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - slug: string
+  - PageAvailable: boolean
+  - publishedAt: datetime
+  - Image: media (name, url)
+  - ImgThumb: media (name, url)
+  - LeadCrew: relation (LeadCrew)
+  - LeadCast: relation (LeadCast)
+
+4. FamousTrack
+  - Heading: string
+  - Date: string
+  - Content: string
+  - ExternalUrl: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - Image: media (name, url)
+  - Songs: relation (Song)
+
+5. FamousVideo
+  - heading: string
+  - Date: string
+  - Content: string
+  - ExternalUrl: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - Image: media (name, url)
+  - Videos: relation (YoutubeVideo)
+
+6. FilmsData
+  - Title: string
+  - Year: string
+  - Catogery: string
+  - genere1: string
+  - genere2: string
+  - durations: string
+  - FIlmContent: string
+  - ExternalUrl: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - Country: string
+  - Language: string
+  - ProductionCompany: string
+  - Distributed_by: string
+  - Sound_MIx: string
+  - Aspect_Ratio: string
+  - Project_Summary: string
+  - slug: string/null
+  - ImgThumb: media (name, url)
+
+7. DataFilms (extended film data)
+  - Title: string
+  - Year: string
+  - Catogery: string
+  - genere1: string
+  - genere2: string
+  - durations: string
+  - FIlmContent: string
+  - ExternalUrl: string
+  - BannerImages: media[] (name, url)
+  - Country: string
+  - Language: string
+  - ProductionCompany: string
+  - Distributed_by: string
+  - Sound_MIx: string
+  - Aspect_Ratio: string
+  - Project_Summary: string
+  - createdAt: datetime
+  - updatedAt: datetime
+  - publishedAt: datetime
+  - slug: string
+  - Review: relation (Review[])
+  - Awards: relation (Award[])
+  - Trailer_realeases: relation (TrailerRelease[])
+  - Songs: relation (FilmsSong[])
+  - Videos: relation (MovieVideo[])
+  - LeadCast: relation (LeadCast[])
+  - LeadCrew: relation (LeadCrew[])
+  - PressKit: any[]
+  - Gallery: relation (Gallery[])
+
+// Single (component-like) schemas
+
+A. LeadCast
+  - Name: string
+  - Title: string
+  - Image: media (name, url)
+
+B. LeadCrew
+  - Name: string
+  - Title: string
+  - Image: media (name, url)
+
+C. Song
+  - Title: string
+  - Singer: string
+  - ThumbImage: media (name, url)
+
+D. Review
+  - Reviewer: string
+  - ReviewContent: string
+
+E. Award
+  - AwardTitle: string
+  - awardSponsered: string
+  - givenFor: string
+
+F. TrailerRelease
+  - Date: string
+  - HostName: string
+  - Digital: boolean
+  - HostImage: media (name, url)
+
+G. FilmsSong
+  - Title: string
+  - Singer: string
+  - ThumbImage: media (name, url)
+  - link: { Link: string }[]
+
+H. Gallery
+  - Name: string
+  - Image: media (name, url)
+
+I. Image
+  - name: string
+  - url: string
+
+J. YoutubeVideo
+  - Title: string
+  - MovieName: string
+  - YoutubeId: string
+  - ThumbImage: media (name, url)
+
+K. MovieVideo
+  - Title: string
+  - MovieName: string
+  - YoutubeId: string
+  - ThumbImage: media (name, url)

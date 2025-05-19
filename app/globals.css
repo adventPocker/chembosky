@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('../public/WEB/css/clash-display.css');
+
+
+
+/* css for the image card flip in the fourth sections flip card */
+.custom-card-container {
+  width: 177px;
+  height: 241px;
+  position: relative;
+}
+
+.custom-card {
+  width: 177px;
+  height: 177px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Below sm screen, set width to auto */
+@media (max-width: 640px) {
+  .custom-card-container{
+    width: auto;
+    height: auto ;
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-card {
+    width: auto;
+    height: 177px ;
+  }
+}
+ 
+  .flip .custom-image-container {
+    transform: rotateY(180deg);
+  }
+  
+  .custom-back {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.8s ease 0.6s, opacity 0.8s ease 0.6s; /* Adjusted duration to 0.8s */
+  }
+  
+  .flip .custom-back {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  
+  .more-info {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+
+
+  /* here the special css for button gradient difference multiple templates */
+
+  .filmButtonBg {
+    background: linear-gradient(238.7deg, #FFC475 31.09%, #FFA963 83.44%);
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .filmButtonBg:hover {
+    background: linear-gradient(238.7deg, #FFA963 31.09%, #FFC475 83.44%);
+    transition-delay: 0.3s; /* Add the desired delay here */
+  }
+
+  /* here is the css for the sectionsF2 in the sub flimography page */
+
+
+  .F2background {
+    background: #121212; /* Fallback color */
+    background-blend-mode: multiply;
+    background: #FFDFB4; /* Your desired background color */
+  }
+  /* swiper button colout sectionf2 */
+  /* .swiper-pagination-bullet {
+    color: black;
+  }
+ */
+
